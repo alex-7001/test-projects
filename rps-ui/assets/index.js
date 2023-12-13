@@ -31,3 +31,9 @@ function playRound(playerSelection, computerSelection){
     return "You lose! Rock beats Scissors";
   }
 }
+
+function game(){
+  let playerSelection = prompt("Rock, Paper, or Scissors?");
+  let computerSelection = getComputerChoice();
+  alert(playRound(playerSelection.toLowerCase(), computerSelection));
+}
