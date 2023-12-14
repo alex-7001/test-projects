@@ -37,3 +37,16 @@ function game(){
   let computerSelection = getComputerChoice();
   alert(playRound(playerSelection.toLowerCase(), computerSelection));
 }
+
+// Get all 3 buttons and div to store user choice
+const rpsButtons = document.querySelectorAll("button");
+const choice = document.querySelector(".choice");
+
+// Iterate through each one and add an event listener 
+rpsButtons.forEach((button) => {
+
+  button.addEventListener("click", () => {
+    choice.textContent = `you chose: ${button.innerText}`;
+  });
+
+});
