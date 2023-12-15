@@ -32,11 +32,6 @@ function playRound(playerSelection, computerSelection){
   }
 }
 
-function game(){
-  let playerSelection = prompt("Rock, Paper, or Scissors?");
-  let computerSelection = getComputerChoice();
-  alert(playRound(playerSelection.toLowerCase(), computerSelection));
-}
 
 // Get all 3 buttons and div to store user choice
 const rpsButtons = document.querySelectorAll("button");
@@ -46,7 +41,11 @@ const choice = document.querySelector(".choice");
 rpsButtons.forEach((button) => {
 
   button.addEventListener("click", () => {
-    choice.textContent = `you chose: ${button.innerText}`;
+    let playerChoice = button.innerText.toLowerCase();
+    let computerSelection = getComputerChoice();
+    result = playRound(playerChoice, computerSelection);
+    choice.textContent = `you chose: ${result}`;
+    // choice.textContent = result;
   });
 
 });
