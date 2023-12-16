@@ -4,6 +4,7 @@ for (let i = 0; i < 256; i++) {
   newBox = document.createElement("div");
   container.appendChild(newBox);
   newBox.setAttribute("style", "width: 20px; height: 20px;border: 1px solid;")
+  newBox.setAttribute("class", "box")
 }
 
 document.body.setAttribute("style", "padding: 0; margin: 0; box-sizing: border-box;")
